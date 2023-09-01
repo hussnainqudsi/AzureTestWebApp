@@ -88,7 +88,7 @@ namespace AzureTestWebApp.Controllers
             catch (Exception ex)
             {
 
-                throw;
+                result = "Exception";
             }
 
 
