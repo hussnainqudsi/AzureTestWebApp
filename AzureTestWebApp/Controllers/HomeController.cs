@@ -20,9 +20,11 @@ namespace AzureTestWebApp.Controllers
         private readonly ILogger<HomeController> _logger;
         //private readonly string url = "http://localhost:7071/api/TestingNewAzureFunction";
         private readonly string url = "https://hqtest.azurewebsites.net/api/HQTESTFunction1";
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ApplicationDbContext dbContext;
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext dbContext)
         {
             _logger = logger;
+            this.dbContext = dbContext;
         }
 
         public IActionResult Index()
@@ -60,6 +62,7 @@ namespace AzureTestWebApp.Controllers
             string result = "";
             try
             {
+                var a = dbContext.Student.FirstOrDefault();
                 //Student st = new Student()
                 //{
                 //    Class = "16",
@@ -120,9 +123,9 @@ namespace AzureTestWebApp.Controllers
             string url = "http://localhost:7071/api/TestingNewAzureFunction";
             Student data = new Student()
             {
-                Class = "16",
-                RollNumber = "F16-BSBS-078",
-                Name = "Hussnain Qudsi"
+                FirstName = "16",
+                LastName = "F16-BSBS-078",
+                Email = "Hussnain Qudsi"
             };
             using (var httpClient = new HttpClient())
             {
