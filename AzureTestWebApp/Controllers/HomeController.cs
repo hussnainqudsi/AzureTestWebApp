@@ -19,7 +19,8 @@ namespace AzureTestWebApp.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         //private readonly string url = "http://localhost:7071/api/TestingNewAzureFunction";
-        private readonly string url = "https://hqtest.azurewebsites.net/api/HQTESTFunction1";
+        //private readonly string url = "https://hqtest.azurewebsites.net/api/HQTESTFunction1";
+        private readonly string url = "https://testingazure096.azurewebsites.net/TestingNewAzureFunction";
         private readonly ApplicationDbContext dbContext;
         public HomeController(ILogger<HomeController> logger, ApplicationDbContext dbContext)
         {
