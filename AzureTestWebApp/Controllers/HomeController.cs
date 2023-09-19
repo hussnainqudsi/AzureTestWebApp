@@ -69,6 +69,7 @@ namespace AzureTestWebApp.Controllers
                 //    Name = "Muhammad Hussnain Qudsi",
                 //    RollNumber = "F16-BSCS-079"
                 //};
+
                 string name = "Hussnain";
                 var json = JsonConvert.SerializeObject(name);
                 WebRequest webRequest = WebRequest.Create(url);
